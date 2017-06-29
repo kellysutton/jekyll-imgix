@@ -1,6 +1,7 @@
 require "jekyll/imgix/version"
 require "imgix"
 require "liquid"
+require "jekyll/imgix_tag"
 
 module Jekyll
   module Imgix
@@ -10,7 +11,7 @@ module Jekyll
       client.path(raw).to_url(opts)
     end
 
-  private
+    private
 
     def verify_config_present!
       unless @context.registers[:site].config['imgix']
