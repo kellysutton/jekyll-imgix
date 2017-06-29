@@ -16,7 +16,7 @@ module Jekyll
       srcset = srcsets(raw_src).join(', ')
       default_src = client.path(raw_src).to_url({ w: target_widths.last })
 
-      "<img srcset='#{srcset}' src='#{default_src}' sizes='(min-width: 540px) 540w, 100vw' />"
+      "<img srcset='#{srcset}' src='#{default_src}' sizes='(min-width: 540px) 540px, 100vw' />"
     end
 
     private
